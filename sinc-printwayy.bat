@@ -1,0 +1,1 @@
+php artisan tinker --execute='$started = now(); $stats = app(App\Services\PrintwayyIntegrationService::class)->syncTenant(1); $elapsed = now()->diffInSeconds($started); echo json_encode(["elapsed_seconds"=>$elapsed,"stats"=>$stats], JSON_UNESCAPED_UNICODE);
